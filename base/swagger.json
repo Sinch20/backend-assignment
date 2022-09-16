@@ -1,0 +1,183 @@
+swagger: '2.0'
+info:
+  title: User API
+  description: Test description
+  termsOfService: https://www.google.com/policies/terms/
+  contact:
+    email: contact@snippets.local
+  license:
+    name: BSD License
+  version: v1
+host: 127.0.0.1:8000
+schemes:
+  - http
+basePath: /api
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  Basic:
+    type: basic
+security:
+  - Basic: []
+paths:
+  /users:
+    get:
+      operationId: users_list
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - users
+    post:
+      operationId: users_create
+      description: ''
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags:
+        - users
+    parameters: []
+  /users/{id}:
+    get:
+      operationId: users_read
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - users
+    put:
+      operationId: users_update
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - users
+    delete:
+      operationId: users_delete
+      description: ''
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+        - users
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+  /usersearch:
+    get:
+      operationId: usersearch_list
+      description: ''
+      parameters:
+        - name: ordering
+          in: query
+          description: Which field to use when ordering the results.
+          required: false
+          type: string
+        - name: search
+          in: query
+          description: A search term.
+          required: false
+          type: string
+        - name: page
+          in: query
+          description: A page number within the paginated result set.
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: ''
+          schema:
+            required:
+              - count
+              - results
+            type: object
+            properties:
+              count:
+                type: integer
+              next:
+                type: string
+                format: uri
+                x-nullable: true
+              previous:
+                type: string
+                format: uri
+                x-nullable: true
+              results:
+                type: array
+                items:
+                  $ref: '#/definitions/Employee'
+      tags:
+        - usersearch
+    parameters: []
+definitions:
+  Employee:
+    description: ''
+    required:
+      - id
+      - first_name
+      - last_name
+      - company_name
+      - city
+      - state
+      - zip
+      - email
+      - web
+      - age
+    type: object
+    properties:
+      id:
+        title: Id
+        type: integer
+      first_name:
+        title: First name
+        type: string
+        maxLength: 70
+        minLength: 1
+      last_name:
+        title: Last name
+        type: string
+        maxLength: 70
+        minLength: 1
+      company_name:
+        title: Company name
+        type: string
+        maxLength: 70
+        minLength: 1
+      city:
+        title: City
+        type: string
+        maxLength: 70
+        minLength: 1
+      state:
+        title: State
+        type: string
+        maxLength: 70
+        minLength: 1
+      zip:
+        title: Zip
+        type: integer
+      email:
+        title: Email
+        type: string
+        format: email
+        minLength: 1
+      web:
+        title: Web
+        type: string
+        maxLength: 100
+        minLength: 1
+      age:
+        title: Age
+        type: integer
