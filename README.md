@@ -9,9 +9,9 @@ The API has the following functionalities:
 - sort list by field name - Django filters have been used (ordering class) which gives a drop down box in a 'filters' option of ascending and descending order of all the field names which can be chosen. Also the endpoint can be changed as **'/api/usersearch?ordering=company_name'**. Here, url has been made as usersearch. 
 - pagination of users list - Pagination has been done where there are page numbers for listing the users. Limits and offsets have been applied which gives the limit of the number of users to be listed in a particular page. The endpoint created for pagination is **'api/usersearch?limit=3&offset=4'**. 
 - create new user (/api/users - POST) - new users are created
-- get detail of a user (/api/users/ - GET) - using the id the details of the user can be fetched. The endpoint is **'/api/users/3'**. Here <id> is 3. 
+- get detail of a user (/api/users/ - GET) - using the id the details of the user can be fetched. The endpoint is **'/api/users/3'**. Here id is 3. 
 - update details of a user (/api/users/ - PUT) - details of the user can be updated
-- delete a user (/api/users/ - DELETE) - details of a user can be deleted by selecting the id of the user. The endpoint is **'/api/users/3'**. Here <id> is 3. 
+- delete a user (/api/users/ - DELETE) - details of a user can be deleted by selecting the id of the user. The endpoint is **'/api/users/3'**. Here id is 3. 
 
 **How to setup and run this project:- **
 1) Install the latest version of Python. 
