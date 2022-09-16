@@ -1,21 +1,26 @@
 # Backend Assignment
 
-Create REST APIs using Python (Flask, Django, any other web framework of your choice) for managing the user’s data.  
-You can use database(i.e SQL, NOSQL) of your choice to store the data.  
-Take sample data from [here](https://datapeace-storage.s3-us-west-2.amazonaws.com/dummy_data/users.json).
+Assignment: True Value Access - Create REST APIs using Python (Flask, Django, any other web framework of your choice) for managing the user’s data.
+The rest framework used is Django and the database selected for managing the user data is MySQL. 
+The user data has been taken from the sample data already given. It is assumed as employee (user) data. 
+The API has the following functionalities:
+list users - This functionality lists all the users in the database (There are 500 users in the given sample data). The endpoint for this is taken as - '/api/users GET'
+search for a user by name - Search functionality has been implemented which checks for the first_name and last_name and renders the user whose name matches. 
+sort list by field name - Django filters have been used (ordering class) which gives a drop down box in a 'filters' option of ascending and descending order of all the field names which can be chosen. Also the endpoint can be changed as '/api/usersearch?ordering=company_name'. Here, url has been made as usersearch. 
+pagination of users list - Pagination has been done where there are page numbers for listing the users. Limits and offsets have been applied which gives the limit of the number of users to be listed in a particular page. The endpoint created for pagination is 'api/usersearch?limit=3&offset=4'. 
+create new user (/api/users - POST) - new users are created
+get detail of a user (/api/users/ - GET) - using the id the details of the user can be fetched. The endpoint is '/api/users/3'. Here <id> is 3. 
+update details of a user (/api/users/ - PUT) - details of the user can be updated
+delete a user (/api/users/ - DELETE) - details of a user can be deleted by selecting the id of the user. The endpoint is '/api/users/3'. Here <id> is 3. 
 
-It should have following functionalities:
-
-- list users (`/api/users GET`)
-- search for a user by name
-- sort list by field name
-- pagination of users list
-- create new user (`/api/users - POST`)
-- get detail of a user (`/api/users/<id> - GET`)
-- update details of a user (`/api/users - PUT`)
-- delete a user (`/api/users - DELETE`)
-
-_Attention to detail and meeting all requirements is important in the project. Completing it in less time will not give you any preference._
+How to setup and run this project:- 
+1) Install the latest version of Python. 
+2) Install MySQL server and workbench 
+3) Install Django and Django rest framework
+4) Install VS Code 
+5) Create .env file and and connect the framework to database with fileds like Database name, user,password and host.
+6) Run the project using startapp and make a folder called base (in our case the name is base).
+ 
 
 ## **Task Overview**
 
