@@ -32,7 +32,7 @@ decorator==5.1.1
 defusedxml==0.7.1
 dill==0.3.5.1
 dj-database-url==1.0.0
-Django==4.1.1
+Django==3.2.9
 django-filter==22.1
 django-heroku==0.3.1
 djangorestframework==3.13.1
