@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'api',
     'django_filters',
     'drf_yasg2',
+    'bootsrap4'
 ]
 
 MIDDLEWARE = [
