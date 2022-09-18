@@ -12,7 +12,7 @@ This functionality lists all the users in the database (There are 500 users in t
 #### 2. Search for a user by name 
 Search functionality has been implemented which checks for the first_name and last_name and renders the user whose name matches.
 Example Response: for searching a particular name (first name or last name). Here we are searching for Josephine
-js
+```js
    [
    {
     "count": 1,
@@ -32,6 +32,7 @@ js
             "age": 48
     }
     ]
+```
 
 ![image](https://user-images.githubusercontent.com/83527617/190898445-86ab0966-2866-441c-9267-d74f258abda6.png)
 
@@ -49,7 +50,7 @@ Pagination has been done where there are page numbers for listing the users. Lim
 #### 5. Create new user (/api/users - POST) 
 New users are created
 ![image](https://user-images.githubusercontent.com/83527617/190898747-142c6d09-5c47-4a3e-bf1d-d868d45f87a4.png)
-js
+```js
 [
     {
         "id": 502,
@@ -64,14 +65,14 @@ js
         "age": 32
     }
 ]
-
+```
 
 #### 6. Get detail of a user (/api/users/ - GET) 
 Using the id the details of the user can be fetched. The endpoint is '/api/users/23'. Here <id> is 23. 
 ![image](https://user-images.githubusercontent.com/83527617/190898957-f10a60f8-249e-4e5a-994b-c1dd330480df.png)
 
 Example Response: for getting 
-js
+```js
     {
     "id": 23,
     "first_name": "Willard",
@@ -84,7 +85,7 @@ js
     "web": "http://www.ingallsdonaldresq.com",
     "age": 75
     },
-
+```
 
 #### 7. Update details of a user (/api/users/ - PUT) 
 Details of the user can be updated
@@ -93,16 +94,16 @@ Details of the user can be updated
 
 #### 8. Delete a user (/api/users/ - DELETE) 
 Details of a user can be deleted by selecting the id of the user. The endpoint is '/api/users/3'. Here <id> is 3. 
-js
+```js
 HTTP 200 OK
 Allow: DELETE, OPTIONS, GET, PUT
 Content-Type: application/json
 Vary: Accept
 
 "User deleted successfully"
+```
 
-
-*How to setup and run this project:-* 
+### How to setup and run this project:-
 1) Install the latest version of Python. 
 2) Install MySQL server and workbench 
 3) Install Django and Django rest framework
