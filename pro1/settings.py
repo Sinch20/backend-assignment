@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'api',
     'django_filters',
     'drf_yasg2',
-    'bootsrap4'
+
 ]
 
 MIDDLEWARE = [
@@ -130,7 +130,7 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
+STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
