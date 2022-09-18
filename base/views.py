@@ -1,6 +1,5 @@
 from pickle import GET
 from rest_framework import generics
-from types import GenericAlias
 from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Employee 
