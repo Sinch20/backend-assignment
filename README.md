@@ -2,7 +2,7 @@
 # backend-assignment
 ### True Value Access - Backend Assignment
 Create REST APIs using Python (Flask, Django, any other web framework of your choice) for managing the user’s data.
-The rest framework used is Django and the database selected for managing the user data is MySQL. 
+The rest framework used is Django and the database selected for managing the user data is SQLite. 
 The user data has been taken from the sample data already given. It is assumed as employee (user) data. 
 The API has the following functionalities:
 
